@@ -1,4 +1,4 @@
-package sample;
+package histogram.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
