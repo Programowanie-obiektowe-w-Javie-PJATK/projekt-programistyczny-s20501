@@ -6,14 +6,31 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("View/main.fxml"));
+
+        Scene MainScene = new Scene(root, 400, 375);
+        primaryStage.setScene(MainScene);
+        primaryStage.setTitle("Histogram");
+
+
+
+
         primaryStage.show();
+
+
+//        Stage preview = new Stage();
+//
+//        preview.setTitle("Podgląd");
+//        preview.setWidth(200);
+//        preview.setHeight(200);
+//        preview.initModality(Modality.APPLICATION_MODAL);
+//        preview.show();
+
     }
 
 
