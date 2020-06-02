@@ -3,8 +3,15 @@ package histogram.Controller;
 import histogram.Class.HistogramText;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainController {
 
@@ -19,10 +26,24 @@ public class MainController {
     
 
     @FXML
-    private void createHistogram(ActionEvent event) {
+    private void createHistogram(ActionEvent event) throws IOException {
         HistogramText histogram = new HistogramText(textForm.getText());
 
-           System.out.println( histogram.getHistogram());
+        FXMLLoader  loader = FXMLLoader.load(getClass().getResource("../View/preview.fxml"));
+        Parent root = loader.load();
+
+        PreviewController previewController = loader.getController();
+        previewController.setHistogram(histogram);
+
+
+        Stage preview = new Stage();
+        preview.setScene(new Scene(root,200,200));
+
+
+        preview.setTitle("Podgląd");
+        preview.initModality(Modality.APPLICATION_MODAL);
+        preview.show();
+
     }
 
     @FXML
