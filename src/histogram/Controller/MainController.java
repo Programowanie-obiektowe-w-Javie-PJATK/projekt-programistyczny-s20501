@@ -1,5 +1,6 @@
 package histogram.Controller;
 
+import histogram.Class.HistogramText;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,14 +16,13 @@ public class MainController {
 
     @FXML
     private TextArea textForm ;
-
-    public void initialize() {
-        // initialization here, if needed...
-    }
+    
 
     @FXML
     private void createHistogram(ActionEvent event) {
-            System.out.println("Histogram click");
+        HistogramText histogram = new HistogramText(textForm.getText());
+
+           System.out.println( histogram.getHistogram());
     }
 
     @FXML

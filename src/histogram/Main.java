@@ -16,10 +16,6 @@ public class Main extends Application {
         Scene MainScene = new Scene(root, 400, 375);
         primaryStage.setScene(MainScene);
         primaryStage.setTitle("Histogram");
-
-
-
-
         primaryStage.show();
 
 
