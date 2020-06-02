@@ -8,6 +8,6 @@
 
 <?import javafx.scene.control.Label?>
 <GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="histogram.Controller.PreviewController" hgap="10" vgap="10">
-<Label> Text</Label>
+
 </GridPane>
 

@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainController {
+public class MainController  {
 
     @FXML
     private Button histogramBtn ;
@@ -29,7 +29,7 @@ public class MainController {
     private void createHistogram(ActionEvent event) throws IOException {
         HistogramText histogram = new HistogramText(textForm.getText());
 
-        FXMLLoader  loader = FXMLLoader.load(getClass().getResource("../View/preview.fxml"));
+        FXMLLoader  loader  = new FXMLLoader(getClass().getResource("../View/preview.fxml"));
         Parent root = loader.load();
 
         PreviewController previewController = loader.getController();
