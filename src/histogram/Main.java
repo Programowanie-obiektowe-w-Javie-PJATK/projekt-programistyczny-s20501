@@ -19,14 +19,6 @@ public class Main extends Application {
         primaryStage.show();
 
 
-//        Stage preview = new Stage();
-//
-//        preview.setTitle("Podgląd");
-//        preview.setWidth(200);
-//        preview.setHeight(200);
-//        preview.initModality(Modality.APPLICATION_MODAL);
-//        preview.show();
-
     }
 
 
