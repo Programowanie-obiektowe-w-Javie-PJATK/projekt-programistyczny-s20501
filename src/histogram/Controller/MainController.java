@@ -27,6 +27,13 @@ public class MainController  {
 
     @FXML
     private void createHistogram(ActionEvent event) throws IOException {
+
+        // Sprawdza czy puste
+       if  (textForm.getText() == null || textForm.getText().trim().isEmpty()) {
+            return;
+        }
+
+
         HistogramText histogram = new HistogramText(textForm.getText());
 
         FXMLLoader  loader  = new FXMLLoader(getClass().getResource("../View/preview.fxml"));
