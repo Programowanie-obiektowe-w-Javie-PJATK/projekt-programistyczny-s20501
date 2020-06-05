@@ -11,8 +11,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.FileChooser;
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
