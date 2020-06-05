@@ -11,7 +11,7 @@
     <HBox spacing="5"  GridPane.rowIndex="2" >
 
         <Button text="Zapisz"  />
-        <Button text="Sortuj" />
+        <Button text="Sortuj" onAction="#sort" />
     </HBox>
 
     <ScrollPane  GridPane.rowIndex="1" >

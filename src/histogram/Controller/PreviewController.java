@@ -1,9 +1,8 @@
 package histogram.Controller;
 
 import histogram.Class.HistogramText;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
 
@@ -20,5 +19,10 @@ public class PreviewController {
         this.histogram = histogram;
 
         textForm.setText(this.histogram.getHistogram());
+    }
+
+    public void sort(ActionEvent actionEvent) {
+        this.histogram.sort();
+
     }
 }

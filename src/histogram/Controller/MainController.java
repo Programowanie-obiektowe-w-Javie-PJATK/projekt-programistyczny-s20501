@@ -16,12 +16,6 @@ import java.io.IOException;
 public class MainController  {
 
     @FXML
-    private Button histogramBtn ;
-
-    @FXML
-    private Button importBtn ;
-
-    @FXML
     private TextArea textForm ;
     
 

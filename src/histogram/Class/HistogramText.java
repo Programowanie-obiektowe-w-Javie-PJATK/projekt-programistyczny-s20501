@@ -1,9 +1,6 @@
 package histogram.Class;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class HistogramText {
 
@@ -38,5 +35,15 @@ public class HistogramText {
         }
         String mapAsString = sb.toString();
         return mapAsString;
+    }
+    public void sort(){
+        List sortedKeys=new ArrayList(histogram.keySet());
+        Collections.sort(sortedKeys);
+
+        for(int i = 0; i < sortedKeys.size(); i++) {
+            System.out.println(sortedKeys.get(i));
+        }
+
+
     }
 }
