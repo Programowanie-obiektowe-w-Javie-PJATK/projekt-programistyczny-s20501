@@ -12,6 +12,7 @@ public class PreviewController {
     private Text textForm ;
 
 
+
   private HistogramText histogram;
 
 

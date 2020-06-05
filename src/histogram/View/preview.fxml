@@ -4,8 +4,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
-
 <?import javafx.scene.control.ScrollPane?>
+
 <GridPane fx:id="container" xmlns:fx="http://javafx.com/fxml" fx:controller="histogram.Controller.PreviewController" hgap="10" vgap="10">
 
     <HBox spacing="5"  GridPane.rowIndex="2" >

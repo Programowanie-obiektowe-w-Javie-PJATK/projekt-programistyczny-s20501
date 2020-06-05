@@ -6,19 +6,29 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.FileChooser;
 
+
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
-public class MainController  {
+public class MainController   {
 
     @FXML
     private TextArea textForm ;
-    
 
+    @FXML
+    private GridPane gp;
+
+
+
+    // Tworzy histogram
     @FXML
     private void createHistogram(ActionEvent event) throws IOException {
 
@@ -46,9 +56,14 @@ public class MainController  {
         preview.show();
 
     }
-
+    // Importuje zawartość pliku
     @FXML
-    private void importFile(ActionEvent event) {
-        System.out.println("Import Click");
+    private void importFile() throws FileNotFoundException {
+        Stage stage = (Stage) gp.getScene().getWindow();
+        FileChooser fileChooser = new FileChooser();
+        File file =fileChooser.showOpenDialog(stage);
+        Scanner scan = new Scanner(file);
+        scan.useDelimiter("\\Z");
+        textForm.setText( scan.next());
     }
 }
