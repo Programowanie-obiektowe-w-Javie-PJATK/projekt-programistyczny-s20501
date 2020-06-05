@@ -37,7 +37,7 @@ public class PreviewController {
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
         fileChooser.getExtensionFilters().add(extFilter);
 
-        //Show save file dialog
+        // Pokazuje dialog do wyboru pliku
         File file = fileChooser.showSaveDialog(stage);
 
         if (file != null) {
