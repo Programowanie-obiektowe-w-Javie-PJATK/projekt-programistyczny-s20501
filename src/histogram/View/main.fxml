@@ -1,0 +1,21 @@
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+
+
+<GridPane fx:id="gp" xmlns:fx="http://javafx.com/fxml" fx:controller="histogram.Controller.MainController" hgap="10" vgap="10">
+    <TextArea fx:id="textForm" GridPane.rowIndex="1" />
+    <HBox spacing="10" alignment="bottom_right" GridPane.rowIndex="4">
+        <GridPane.margin>
+            <Insets right="20" />
+        </GridPane.margin>
+        <Button fx:id="histogramBtn" text="Histogram" onAction="#createHistogram" />
+        <Button fx:id="importBtn" text="Importuj tekst" onAction="#importFile" />
+    </HBox>
+
+</GridPane>
+
